@@ -1,6 +1,6 @@
 # PyScrape
 
-This script uses the `requests` and `BeautifulSoup` libraries to scrape stock prices in India and displays all stocks below 100 INR.
+This script uses the `requests` and `BeautifulSoup` libraries to scrape stock prices in India and displays all stocks below 100 INR. New added support for GUI and for additional functionality such as BUY and SELL options.
 
 ## Requirements
 
