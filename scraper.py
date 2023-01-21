@@ -1,17 +1,20 @@
 import requests
 from bs4 import BeautifulSoup
 
-url = "https://finance.yahoo.com/"
-page = requests.get(url)
-soup = BeautifulSoup(page.content, "html.parser")
+url = 'https://munafasutra.com/nse/BestIntradayTips'
+response = requests.get(url)
+soup = BeautifulSoup(response.text, 'html.parser')
 
-stock_table = soup.find("table", {"class": "W(100%) M(0)"})
-stock_rows = stock_table.find_all("tr")
-
-for row in stock_rows:
-    stock_data = row.find_all("td")
-    if stock_data:
-        stock_symbol = stock_data[0].text
-        stock_price = float(stock_data[1].text)
-        if stock_price < 25:
-            print(f"{stock_symbol}: ${stock_price}")
+stocks = soup.find_all('tr')
+for stock in stocks:
+    cells = stock.find_all('td')
+    if len(cells) == 7:
+        name = cells[0].text.strip()
+        entry_price = cells[2].text.strip()
+        first_target = cells[3].text.strip()
+        try:
+            entry_price = float(entry_price)
+            if entry_price < 100.00:
+                print(f'{name} - Entry Price: {entry_price} - First Target: {first_target}\n')
+        except ValueError:
+            print(f"{entry_price} is not a valid number.")
