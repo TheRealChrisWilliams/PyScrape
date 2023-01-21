@@ -12,4 +12,4 @@ This script uses the `requests` and `BeautifulSoup` libraries to scrape stock pr
 
 1. Clone or download the repository
 2. Install the required libraries by running `pip install -r requirements.txt`
-3. Run the script by using the command `python stock_scraper.py`
+3. Run the script by using the command `python scraper.py`
