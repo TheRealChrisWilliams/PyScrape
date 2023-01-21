@@ -1,6 +1,6 @@
 # PyScrape
 
-This script uses the `requests` and `BeautifulSoup` libraries to scrape stock prices in India and displays all stocks below 100 INR. Additionally, the script uses `Tkinter` and `threading`. This adds a user-friendly GUI along with multithreading. This improves response times and allows the user to change the parameters while the scraping thread retrieves the information.
+This script uses the `requests` and `BeautifulSoup` libraries to scrape stock prices in India and displays all stocks in a certain price range. Additionally, the script uses `Tkinter` and `threading`. This adds a user-friendly GUI along with multithreading. This improves response times and allows the user to change the parameters while the scraping thread retrieves the information.
 
 ## Requirements
 
