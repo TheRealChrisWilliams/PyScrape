@@ -5,6 +5,7 @@ from tkinter import ttk
 from bs4 import BeautifulSoup
 
 
+# Main scraper function
 def scrape_data(url):
     lower_bound = int(lower_bound_entry.get())
     upper_bound = int(upper_bound_entry.get())
@@ -27,10 +28,12 @@ def scrape_data(url):
                 print(f"\n")
 
 
-def start_scraping():
+def start_scraping():   # Callback function to implement multithreading
     url = website_entry.get()
     scraping_thread = threading.Thread(target=scrape_data, args=(url,))
     scraping_thread.start()
+
+# Create a window in Tkinter
 
 
 root = tk.Tk()
