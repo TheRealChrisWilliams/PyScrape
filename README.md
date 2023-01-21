@@ -7,6 +7,7 @@ This script uses the `requests` and `BeautifulSoup` libraries to scrape stock pr
 - Python 3.x
 - requests
 - bs4
+- Tkinter
 
 ## Usage
 
